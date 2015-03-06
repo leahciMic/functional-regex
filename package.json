@@ -1,0 +1,31 @@
+{
+  "name": "functional-regex",
+  "version": "1.0.0",
+  "description": "Functional regex, makes it easy to iterate and map over matches from a regular expression.",
+  "main": "functional-regex.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leahciMic/functional-regex"
+  },
+  "keywords": [
+    "functional",
+    "regex",
+    "regexp",
+    "regular",
+    "expressions",
+    "map",
+    "forEach"
+  ],
+  "author": "Michael Leaney <leahcimic@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leahciMic/functional-regex/issues"
+  },
+  "homepage": "https://github.com/leahciMic/functional-regex",
+  "devDependencies": {
+    "jasmine": "^2.2.1"
+  }
+}
