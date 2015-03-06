@@ -1,4 +1,4 @@
-# Functional Regex [![Build Status](https://travis-ci.org/leahciMic/functional-regex.svg)](https://travis-ci.org/leahciMic/functional-regex)
+# Functional Regex [![Build Status](https://travis-ci.org/leahciMic/functional-regex.svg?branch=master)](https://travis-ci.org/leahciMic/functional-regex)
 
 Functional Regex simplifies the way you work with global regular expressions in
 JavaScript.
