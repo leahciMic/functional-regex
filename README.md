@@ -1,7 +1,10 @@
 # Functional Regex [![Build Status](https://travis-ci.org/leahciMic/functional-regex.svg?branch=master)](https://travis-ci.org/leahciMic/functional-regex)
 
-Functional Regex simplifies the way you work with global regular expressions in
-JavaScript.
+[![Code Climate](https://codeclimate.com/github/leahciMic/functional-regex/badges/gpa.svg)](https://codeclimate.com/github/leahciMic/functional-regex)
+[![Test Coverage](https://codeclimate.com/github/leahciMic/functional-regex/badges/coverage.svg)](https://codeclimate.com/github/leahciMic/functional-regex/coverage)
+[![Issue Count](https://codeclimate.com/github/leahciMic/functional-regex/badges/issue_count.svg)](https://codeclimate.com/github/leahciMic/functional-regex)
+[![Dependency Status](https://www.versioneye.com/user/projects/57b1a71fe1dc00004428af9c/badge.svg?style=flat)](https://www.versioneye.com/user/projects/57b1a71fe1dc00004428af9c)
+Functional Regex simplifies the way you work with global regular expressions in JavaScript.
 
 When looking for something like /foo(test)/g it's necessary to do:
 
@@ -17,21 +20,20 @@ while ((result = regex.exec(test)) !== null) {
 Wouldn't it be nice if we could do something more like:
 
 ```js
-var regex = /foo(test)/g;
+var fregex = require('functional-regex');
 
-regex.forEach(function(result) {
-    // do something with result.
-});
+fregex(/[\d+]/g, '1. There is 2 numbers in this string'); // == ['1', '2']
 ```
 
-And even map over the matches:
+Because it's simply an array, we can use `forEach` and `map` on it as well as other array methods.
 
 ```js
-var regex = /src="([^"]*"/g;
+var fregex = require('functional-regex');
 
-var scripts = regex.map(function(result) {
-  return result[1];
-});
+fregex(/[\d+]/g, '1. There is 2 numbers in this string')
+  .map(function(x) {
+    return parseInt(x, 10);
+  }); // == [1, 2]
 ```
 
 ## Installation
@@ -42,12 +44,21 @@ npm install --save functional-regex
 
 ## Usage
 
-There are two ways to use Functional Regex.
+There are three ways to use Functional Regex.
 
 1. Standalone (default, because extending native prototypes is evil)
-2. Augmenting the RegExp prototype
+2. Legacy (also does not modify prototypes)
+3. Augmenting the RegExp prototype
 
 ### 1. Standalone
+
+```js
+var fregex = require('functional-regex');
+
+fregex(regex, text); // => array
+```
+
+### 2. Standalone (legacy)
 
 ```js
 var fregex = require('functional-regex');
@@ -56,7 +67,7 @@ fregex.forEach(regex, text, iteratorFn);
 fregex.map(regex, text, iteratorFn);
 ```
 
-### 2. RegExp prototype
+### 3. RegExp prototype
 
 ```js
 require('functional-regex').addToRegExp();

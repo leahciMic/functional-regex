@@ -1,10 +1,10 @@
 {
   "name": "functional-regex",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Functional regex, makes it easy to iterate and map over matches from a regular expression.",
   "main": "functional-regex.js",
   "scripts": {
-    "test": "./node_modules/.bin/jasmine"
+    "test": "eslint ./ && jasmine"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,10 @@
   "homepage": "https://github.com/leahciMic/functional-regex",
   "devDependencies": {
     "jasmine": "^2.2.1"
+  },
+  "dependencies": {
+    "eslint": "^3.3.0",
+    "eslint-config-airbnb-base": "^5.0.2",
+    "eslint-plugin-import": "^1.13.0"
   }
 }
