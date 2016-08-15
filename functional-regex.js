@@ -1,3 +1,5 @@
+'use strict'; // eslint-disable-line strict
+
 function fregex(regex, text) {
   if (!regex.flags.match(/g/)) {
     regex = new RegExp(regex.source, `${regex.flags}g`); // eslint-disable-line no-param-reassign

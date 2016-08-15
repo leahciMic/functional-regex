@@ -1,3 +1,5 @@
+'use strict'; // eslint-disable-line strict
+
 const fregex = require('../functional-regex.js');
 
 const text = [

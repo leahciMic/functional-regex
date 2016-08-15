@@ -1,7 +1,7 @@
 {
   "name": "functional-regex",
   "version": "2.0.0",
-  "description": "Functional regex, makes it easy to iterate and map over matches from a regular expression.",
+  "description": "Functional Regex simplifies the way you work with global regular expressions in JavaScript.",
   "main": "functional-regex.js",
   "scripts": {
     "test": "eslint ./ && jasmine"

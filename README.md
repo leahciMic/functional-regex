@@ -1,10 +1,18 @@
-# Functional Regex [![Build Status](https://travis-ci.org/leahciMic/functional-regex.svg?branch=master)](https://travis-ci.org/leahciMic/functional-regex)
+# Functional Regex
 
+[![Build Status](https://travis-ci.org/leahciMic/functional-regex.svg?branch=master)](https://travis-ci.org/leahciMic/functional-regex)
 [![Code Climate](https://codeclimate.com/github/leahciMic/functional-regex/badges/gpa.svg)](https://codeclimate.com/github/leahciMic/functional-regex)
 [![Test Coverage](https://codeclimate.com/github/leahciMic/functional-regex/badges/coverage.svg)](https://codeclimate.com/github/leahciMic/functional-regex/coverage)
 [![Issue Count](https://codeclimate.com/github/leahciMic/functional-regex/badges/issue_count.svg)](https://codeclimate.com/github/leahciMic/functional-regex)
 [![Dependency Status](https://www.versioneye.com/user/projects/57b1a71fe1dc00004428af9c/badge.svg?style=flat)](https://www.versioneye.com/user/projects/57b1a71fe1dc00004428af9c)
-Functional Regex simplifies the way you work with global regular expressions in JavaScript.
+
+> Functional Regex simplifies the way you work with global regular expressions in JavaScript.
+
+Functional Regex aims to simplify the process of iterating over a global regular expression. It is
+often easier to treat the results of a globally matched regular expression as an array. It is then
+possible to use `map`, `reduce`, `forEach`, `some`, `filter`, etc on the results.
+
+## Example
 
 When looking for something like /foo(test)/g it's necessary to do:
 
