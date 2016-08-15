@@ -1,8 +1,9 @@
 'use strict'; // eslint-disable-line strict
 
 function fregex(regex, text) {
-  if (!regex.flags.match(/g/)) {
-    regex = new RegExp(regex.source, `${regex.flags}g`); // eslint-disable-line no-param-reassign
+  if (!regex.global) {
+    const flags = regex.flags ? regex.flags : regex.toString().match(/\/([^/]*)$/)[1];
+    regex = new RegExp(regex.source, `${flags}g`); // eslint-disable-line no-param-reassign
   }
   return fregex.map(regex, text, x => x);
 }
